@@ -4,8 +4,7 @@ import React, { useState } from 'react';
 import useSearchStore from '@/stores/searchStore';
 
 const Search = () => {
-	const { searchUsers } = useSearchStore();
-	const [searchText, setSearchText] = useState('');
+	const { searchUsers, searchText, setSearchText } = useSearchStore();
 
 	const handleSearch = (e) => {
 		e.preventDefault();

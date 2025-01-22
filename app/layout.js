@@ -10,9 +10,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={` min-h-screen h-screen antialiased`}>
+			<body className={`min-h-screen antialiased`}>
 				<Navbar />
-				<main className="max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-2xl mx-auto p-8 h-full">
+				<main className="max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-2xl mx-auto m-8 h-full">
 					{children}
 				</main>
 			</body>

@@ -72,6 +72,7 @@ const UserDetails = ({ user }) => {
 				<Link
 					href={html_url}
 					target="_blank"
+					rel="noopener noreferrer"
 					className="flex justify-center items-center text-sm w-full px-4 py-2 bg-neutral-800 rounded text-gray-100"
 				>
 					View on GitHub
@@ -137,6 +138,7 @@ const UserDetails = ({ user }) => {
 						<Link
 							href={`https://x.com/${twitter_username}`}
 							target="_blank"
+							rel="noopener noreferrer"
 							className="truncate font-bold hover:underline hover:text-blue-600"
 						>
 							{twitter_username}

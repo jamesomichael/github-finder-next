@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import UserDetails from './UserDetails';
 
 import useUserStore from '@/stores/userStore';
+import UserRepos from './UserRepos';
 
 const User = ({ username }) => {
 	const { isLoading, setActiveUser, user, repos } = useUserStore();
@@ -18,8 +19,9 @@ const User = ({ username }) => {
 	return isLoading ? (
 		<>Loading...</>
 	) : (
-		<div className="grid grid-rows-2 sm:grid-rows-none sm:grid-cols-[18rem_1fr] px-4">
+		<div className="grid grid-rows-[auto_1fr] gap-6 sm:grid-rows-none sm:grid-cols-[18rem_1fr] px-4">
 			<UserDetails user={user} />
+			<UserRepos repos={repos} />
 		</div>
 	);
 };

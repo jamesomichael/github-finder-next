@@ -54,16 +54,18 @@ const UserDetails = ({ user }) => {
 			/>
 			<div className="flex flex-col">
 				{name && (
-					<span className="text-2xl leading-tight font-bold">
+					<span className="text-2xl leading-tight font-bold dark:text-white">
 						{name}
 					</span>
 				)}
-				<span className="text-gray-600">{login}</span>
+				<span className="text-gray-600 dark:text-gray-200">
+					{login}
+				</span>
 			</div>
 			{created_at && (
 				<span
 					title={dayjs(created_at).format('DD MMMM YYYY, HH:mm:ss')}
-					className="-mt-2 text-sm text-gray-700 font-medium"
+					className="-mt-2 text-sm text-gray-700 font-medium dark:text-gray-300"
 				>
 					Joined {dayjs(created_at).fromNow()}
 				</span>
@@ -73,32 +75,35 @@ const UserDetails = ({ user }) => {
 					href={html_url}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="flex justify-center items-center text-sm w-full px-4 py-2 bg-neutral-800 rounded text-gray-100"
+					className="flex justify-center items-center text-sm w-full px-4 py-2 bg-neutral-800 dark:bg-neutral-600 rounded text-gray-100 dark:text-white font-medium outline outline-1 outline-gray-400"
 				>
 					View on GitHub
 				</Link>
 			)}
-			{bio && <span className="font-bold">{bio}</span>}
+			{bio && <span className="font-bold dark:text-white">{bio}</span>}
 			<div className="flex gap-1 justify-start items-center">
-				<FaUserGroup size={18} className="text-gray-600" />
-				<span className="text-gray-600">
-					<span className="font-bold text-black">
+				<FaUserGroup
+					size={18}
+					className="text-gray-600 dark:text-gray-400"
+				/>
+				<span className="text-gray-600 dark:text-gray-400">
+					<span className="font-bold text-black dark:text-white">
 						{formatNumber(followers)}
 					</span>
 					&nbsp;followers
 				</span>
-				<span className="text-gray-800">·</span>
-				<span className="text-gray-600">
-					<span className="font-bold text-black">
+				<span className="text-gray-800 dark:text-gray-200">·</span>
+				<span className="text-gray-600 dark:text-gray-400">
+					<span className="font-bold text-black dark:text-white">
 						{formatNumber(following)}
 					</span>
 					&nbsp;following
 				</span>
 			</div>
 			{hireable && (
-				<div className="flex items-center gap-1 text-green-600">
+				<div className="flex items-center gap-1 text-green-600 dark:text-green-500">
 					<FaCircleCheck size={22} />
-					<span className="font-bold text-green-800">
+					<span className="font-bold text-green-800 dark:text-green-600">
 						Available for hire
 					</span>
 				</div>
@@ -108,25 +113,35 @@ const UserDetails = ({ user }) => {
 					<div className="grid grid-cols-[1.4rem_1fr] items-center gap-1">
 						<HiOutlineOfficeBuilding
 							size={22}
-							className="text-neutral-500"
+							className="text-neutral-500 dark:text-gray-400"
 						/>
-						<span className="truncate font-bold">{company}</span>
+						<span className="truncate font-bold dark:text-white">
+							{company}
+						</span>
 					</div>
 				)}
 				{location && (
 					<div className="grid grid-cols-[1.4rem_1fr] items-center gap-1">
-						<FaLocationDot size={22} className="text-neutral-500" />
-						<span className="truncate font-bold">{location}</span>
+						<FaLocationDot
+							size={22}
+							className="text-neutral-500 dark:text-gray-400"
+						/>
+						<span className="truncate font-bold dark:text-white">
+							{location}
+						</span>
 					</div>
 				)}
 				{blog && (
 					<div className="grid grid-cols-[1.4rem_1fr] items-center gap-1">
-						<FaLink size={22} className="text-neutral-500" />
+						<FaLink
+							size={22}
+							className="text-neutral-500 dark:text-gray-400"
+						/>
 						<Link
 							href={normalizeUrl(blog)}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="truncate font-bold hover:underline hover:text-blue-600"
+							className="truncate font-bold hover:underline hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
 						>
 							{blog}
 						</Link>
@@ -134,12 +149,15 @@ const UserDetails = ({ user }) => {
 				)}
 				{twitter_username && (
 					<div className="grid grid-cols-[1.4rem_1fr] items-center gap-1">
-						<FaXTwitter size={22} className="text-neutral-500" />
+						<FaXTwitter
+							size={22}
+							className="text-neutral-500 dark:text-gray-400"
+						/>
 						<Link
 							href={`https://x.com/${twitter_username}`}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="truncate font-bold hover:underline hover:text-blue-600"
+							className="truncate font-bold hover:underline hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
 						>
 							{twitter_username}
 						</Link>

@@ -17,7 +17,7 @@ const Search = () => {
 		<div>
 			<form onSubmit={handleSearch}>
 				<input
-					className="border-2 border-red-700 rounded-full py-2 px-4 w-80"
+					className="border-2 border-red-700 dark:bg-neutral-700 dark:text-white dark:border-gray-500 rounded-full py-2 px-4 w-80 focus:outline-gray-500"
 					type="text"
 					value={searchText}
 					onChange={updateSearchText}

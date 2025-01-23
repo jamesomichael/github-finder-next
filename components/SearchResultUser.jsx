@@ -8,7 +8,7 @@ const SearchResultUser = ({ user }) => {
 	return (
 		<Link
 			href={`/user/${login}`}
-			className="flex flex-col h-44 gap-2.5 p-[1rem] justify-center items-center border-2 border-gray-200 rounded-lg hover:bg-gradient-to-br from-transparent hover:to-red-100 hover:cursor-pointer"
+			className="flex flex-col h-44 gap-2.5 p-[1rem] justify-center items-center border-2 border-gray-200 dark:bg-neutral-800 dark:text-white rounded-lg hover:bg-gradient-to-br from-transparent hover:to-red-100 hover:cursor-pointer"
 		>
 			<img
 				src={avatar_url}

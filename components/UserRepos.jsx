@@ -13,24 +13,24 @@ const UserRepos = ({ repos }) => {
 				return (
 					<div
 						key={repo.id}
-						className="grid grid-rows-3 h-52 rounded outline outline-2 outline-black px-4"
+						className="grid grid-rows-3 h-52 rounded outline outline-2 outline-black dark:outline-gray-500 px-4"
 					>
 						<div className="grid grid-cols-[1fr_auto] items-center">
 							<Link
 								href={repo.html_url}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="truncate text-blue-600 hover:underline font-bold"
+								className="truncate text-blue-600 dark:text-blue-400 hover:underline font-bold"
 							>
 								{repo.name}
 							</Link>
-							<span className="text-xs outline outline-2 outline-gray-500 text-gray-500 px-2 py-1 rounded-full font-bold">
+							<span className="text-xs outline outline-2 outline-gray-500 dark:outline-gray-400 text-gray-500 dark:text-gray-400 px-2 py-1 rounded-full font-bold">
 								{repo.private ? 'Private' : 'Public'}
 							</span>
 						</div>
 						<div className="flex">
 							{repo.description && (
-								<span className="line-clamp-3 text-sm">
+								<span className="line-clamp-3 text-sm dark:text-white">
 									{repo.description}
 								</span>
 							)}
@@ -47,13 +47,13 @@ const UserRepos = ({ repos }) => {
 														?.color || '#ccc',
 											}}
 										></div>
-										<span className="truncate text-sm">
+										<span className="truncate text-sm dark:text-gray-200">
 											{repo.language}
 										</span>
 									</>
 								)}
 							</div>
-							<div className="flex justify-center items-center gap-4">
+							<div className="flex justify-center items-center gap-4 dark:text-gray-200">
 								<div className="flex items-center gap-1">
 									<FaRegStar size={15} />
 									<span>{repo.stargazers_count}</span>
@@ -63,7 +63,7 @@ const UserRepos = ({ repos }) => {
 									<span>{repo.forks_count}</span>
 								</div>
 							</div>
-							<div className="flex items-center justify-end">
+							<div className="flex items-center justify-end dark:text-gray-200">
 								{repo.updated_at && (
 									<span className="truncate">
 										Updated&nbsp;

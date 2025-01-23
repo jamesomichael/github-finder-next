@@ -31,9 +31,10 @@ const normalizeUrl = (url) => {
 };
 
 const User = ({ username }) => {
-	const { isLoading, setActiveUser, user } = useUserStore();
+	const { isLoading, setActiveUser, user, repos } = useUserStore();
 
 	console.log('user', user);
+	console.log('repos', repos);
 
 	const {
 		name,

@@ -4,14 +4,19 @@ import axios from 'axios';
 const useUserStore = create((set) => ({
 	isLoading: false,
 	user: {},
+	repos: [],
 
 	setActiveUser: async (username) => {
-		set({ isLoading: true });
-		const result = await axios.get(
+		set({ isLoading: true, repos: [] });
+		const userResponse = await axios.get(
 			`https://api.github.com/users/${username}`
 		);
-		const { data } = result;
-		set({ isLoading: false, user: data });
+		const { data: userData } = userResponse;
+		const reposResponse = await axios.get(
+			`https://api.github.com/users/${username}/repos?per_page=12&sort=created:asc`
+		);
+		const { data: reposData } = reposResponse;
+		set({ isLoading: false, user: userData, repos: reposData });
 	},
 }));
 

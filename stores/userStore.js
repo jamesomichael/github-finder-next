@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const useUserStore = create((set) => ({
 	isLoading: false,
-	user: null,
+	user: {},
 
 	setActiveUser: async (username) => {
 		set({ isLoading: true });

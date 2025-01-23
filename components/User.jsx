@@ -123,21 +123,25 @@ const User = ({ username }) => {
 				)}
 				<div className="flex flex-col gap-2">
 					{company && (
-						<div className="flex items-center gap-1">
+						<div className="grid grid-cols-[1.4rem_1fr] items-center gap-1">
 							<HiOutlineOfficeBuilding
 								size={22}
 								className="text-neutral-500"
 							/>
-							<span className="font-bold">{company}</span>
+							<span className="truncate font-bold">
+								{company}
+							</span>
 						</div>
 					)}
 					{location && (
-						<div className="flex items-center gap-1">
+						<div className="grid grid-cols-[1.4rem_1fr] items-center gap-1">
 							<FaLocationDot
 								size={22}
 								className="text-neutral-500"
 							/>
-							<span className="font-bold">{location}</span>
+							<span className="truncate font-bold">
+								{location}
+							</span>
 						</div>
 					)}
 					{blog && (
@@ -154,7 +158,7 @@ const User = ({ username }) => {
 						</div>
 					)}
 					{twitter_username && (
-						<div className="flex items-center gap-1">
+						<div className="grid grid-cols-[1.4rem_1fr] items-center gap-1">
 							<FaXTwitter
 								size={22}
 								className="text-neutral-500"
@@ -162,7 +166,7 @@ const User = ({ username }) => {
 							<Link
 								href={`https://x.com/${twitter_username}`}
 								target="_blank"
-								className="font-bold hover:underline hover:text-blue-600"
+								className="truncate font-bold hover:underline hover:text-blue-600"
 							>
 								{twitter_username}
 							</Link>

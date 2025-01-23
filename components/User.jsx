@@ -61,7 +61,7 @@ const User = ({ username }) => {
 					src={avatar_url}
 					alt={login}
 					title={name ? name : login}
-					className="rounded-full aspect-square w-72"
+					className="rounded-full aspect-square w-72 outline outline-2 outline-gray-400"
 				/>
 				<div className="flex flex-col">
 					{name && (

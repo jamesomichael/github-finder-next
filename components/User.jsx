@@ -1,5 +1,7 @@
 'use client';
 import React, { useEffect } from 'react';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
 import Link from 'next/link';
 
 import useUserStore from '@/stores/userStore';
@@ -12,6 +14,8 @@ import {
 	FaCircleCheck,
 } from 'react-icons/fa6';
 import { HiOutlineOfficeBuilding } from 'react-icons/hi';
+
+dayjs.extend(relativeTime);
 
 const formatNumber = (number) =>
 	new Intl.NumberFormat('en-US', {
@@ -46,6 +50,8 @@ const User = ({ username }) => {
 		public_gists,
 		hireable,
 		twitter_username,
+		created_at,
+		updated_at,
 	} = user;
 
 	useEffect(() => {
@@ -71,6 +77,16 @@ const User = ({ username }) => {
 					)}
 					<span className="text-gray-600">{login}</span>
 				</div>
+				{created_at && (
+					<span
+						title={dayjs(created_at).format(
+							'DD MMMM YYYY, HH:mm:ss'
+						)}
+						className="-mt-2 text-sm text-gray-700 font-medium"
+					>
+						Joined {dayjs(created_at).fromNow()}
+					</span>
+				)}
 				{html_url && (
 					<Link
 						href={html_url}
@@ -125,13 +141,13 @@ const User = ({ username }) => {
 						</div>
 					)}
 					{blog && (
-						<div className="flex items-center gap-1">
+						<div className="grid grid-cols-[1.4rem_1fr] items-center gap-1">
 							<FaLink size={22} className="text-neutral-500" />
 							<Link
 								href={normalizeUrl(blog)}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="font-bold hover:underline hover:text-blue-600"
+								className="truncate font-bold hover:underline hover:text-blue-600"
 							>
 								{blog}
 							</Link>

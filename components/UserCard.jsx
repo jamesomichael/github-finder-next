@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const SearchResultUser = ({ user }) => {
+const UserCard = ({ user }) => {
 	console.log('user', user);
 	const { login, avatar_url, html_url } = user;
 
@@ -20,4 +20,4 @@ const SearchResultUser = ({ user }) => {
 	);
 };
 
-export default SearchResultUser;
+export default UserCard;

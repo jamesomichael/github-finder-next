@@ -28,7 +28,7 @@ const Navbar = () => {
 					className="px-4 text-white hover:text-gray-200 w-fit flex items-center gap-1.5 h-full"
 				>
 					<FaGithub size={25} />
-					<span className="text-xl font-bold">GitHub Finder</span>
+					<span className="text-xl font-poppins">GitHub Finder</span>
 				</Link>
 				<div className="px-4 text-gray-200 flex justify-end items-center gap-6">
 					<Link className="hover:text-gray-300" href="/">

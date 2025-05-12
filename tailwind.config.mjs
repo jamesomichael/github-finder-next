@@ -7,6 +7,9 @@ export default {
 	],
 	darkMode: 'class',
 	theme: {
+		fontFamily: {
+			poppins: ['Poppins'],
+		},
 		extend: {
 			colors: {
 				background: 'var(--background)',

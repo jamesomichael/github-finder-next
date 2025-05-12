@@ -22,11 +22,11 @@ const RepoCard = ({ repo }) => {
 					{repo.private ? 'Private' : 'Public'}
 				</span>
 			</div>
-			<div className="flex">
+			<div>
 				{repo.description && (
-					<span className="line-clamp-3 text-sm dark:text-white">
+					<p className="line-clamp-3 text-sm dark:text-white">
 						{repo.description}
-					</span>
+					</p>
 				)}
 			</div>
 			<div className="grid grid-cols-[auto_auto_1fr] items-center gap-4 text-sm">

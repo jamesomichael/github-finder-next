@@ -2,10 +2,10 @@
 import React, { useEffect } from 'react';
 
 import UserDetails from './UserDetails';
-
-import useUserStore from '@/stores/userStore';
 import UserRepos from './UserRepos';
 import Loader from './Loader';
+
+import useUserStore from '@/stores/userStore';
 
 const User = ({ username }) => {
 	const { isLoading, setActiveUser, user, repos } = useUserStore();

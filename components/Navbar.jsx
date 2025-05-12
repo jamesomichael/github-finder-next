@@ -2,9 +2,9 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 
-import useSettingsStore from '@/stores/settingsStore';
-
 import { FaGithub, FaSun, FaMoon } from 'react-icons/fa6';
+
+import useSettingsStore from '@/stores/settingsStore';
 
 const Navbar = () => {
 	const { darkMode, setDarkMode } = useSettingsStore();

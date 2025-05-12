@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 const UserCard = ({ user }) => {
-	const { login, avatar_url, html_url } = user;
+	const { login, avatar_url } = user;
 
 	return (
 		<Link

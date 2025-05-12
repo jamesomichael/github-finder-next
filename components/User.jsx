@@ -5,6 +5,7 @@ import UserDetails from './UserDetails';
 
 import useUserStore from '@/stores/userStore';
 import UserRepos from './UserRepos';
+import Loader from './Loader';
 
 const User = ({ username }) => {
 	const { isLoading, setActiveUser, user, repos } = useUserStore();
@@ -17,7 +18,9 @@ const User = ({ username }) => {
 	console.log('repos', repos);
 
 	return isLoading ? (
-		<>Loading...</>
+		<div className="h-full">
+			<Loader />
+		</div>
 	) : (
 		<div className="grid grid-rows-[auto_1fr] gap-6 sm:grid-rows-none sm:grid-cols-[18rem_1fr] px-4">
 			<UserDetails user={user} />

@@ -7,7 +7,7 @@ const UserCard = ({ user }) => {
 	return (
 		<Link
 			href={`/user/${login}`}
-			className="w-full grid grid-cols-[auto_1fr] gap-4 sm:flex sm:flex-col sm:h-44 sm:gap-2.5 p-[1rem] justify-center items-center outline outline-1 hover:outline-2 outline-neutral-400 hover:outline-red-800 dark:outline-neutral-500 dark:bg-neutral-800 dark:text-white rounded-lg dark:hover:outline-neutral-300 hover:cursor-pointer"
+			className="transition-all duration-200 w-full grid grid-cols-[auto_1fr] gap-4 sm:flex sm:flex-col sm:h-44 sm:gap-2.5 p-[1rem] justify-center items-center outline outline-1 hover:outline-2 outline-neutral-400 hover:outline-red-800 dark:outline-neutral-500 dark:bg-neutral-800 dark:text-white rounded-lg dark:hover:outline-neutral-300 hover:cursor-pointer"
 		>
 			<img
 				src={avatar_url}

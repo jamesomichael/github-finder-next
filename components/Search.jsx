@@ -23,7 +23,7 @@ const Search = () => {
 			<form onSubmit={handleSearch}>
 				<input
 					ref={searchRef}
-					className="outline outline-1 focus:outline-2 border-red-700 dark:bg-neutral-700 dark:text-white dark:outline-neutral-500 dark:focus:outline-neutral-400 rounded-full py-2 px-4 w-80 outline-neutral-500 focus:outline-red-800"
+					className="transition-all duration-200 outline outline-1 focus:outline-2 border-red-700 dark:bg-neutral-700 dark:text-white dark:outline-neutral-500 dark:focus:outline-neutral-400 rounded-full py-2 px-4 w-80 outline-neutral-500 focus:outline-red-800"
 					type="text"
 					value={searchText}
 					onChange={updateSearchText}

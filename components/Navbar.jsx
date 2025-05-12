@@ -25,7 +25,7 @@ const Navbar = () => {
 			<main className="grid grid-cols-[1fr_auto] max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-2xl h-full mx-auto">
 				<Link
 					href="/"
-					className="px-4 text-white hover:text-gray-200 w-fit flex items-center gap-1.5 h-full"
+					className="transition-all duration-200 px-4 text-white hover:text-neutral-200 w-fit flex items-center gap-1.5 h-full"
 				>
 					<FaGithub size={25} />
 					<span className="text-xl font-poppins">GitHub Finder</span>

@@ -14,9 +14,6 @@ const User = ({ username }) => {
 		setActiveUser(username);
 	}, [username, setActiveUser]);
 
-	console.log('user', user);
-	console.log('repos', repos);
-
 	return isLoading ? (
 		<div className="h-full">
 			<Loader />

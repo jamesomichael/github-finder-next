@@ -31,9 +31,6 @@ const Navbar = () => {
 					<span className="text-xl font-poppins">GitHub Finder</span>
 				</Link>
 				<div className="px-4 text-gray-200 flex justify-end items-center gap-6">
-					<Link className="hover:text-gray-300" href="/">
-						Home
-					</Link>
 					<div className="flex items-center">
 						<button
 							onClick={toggleDarkMode}

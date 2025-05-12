@@ -22,7 +22,7 @@ const Navbar = () => {
 	};
 	return (
 		<div className="w-full bg-red-800 dark:bg-black h-12">
-			<main className="grid grid-cols-2 max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-2xl h-full mx-auto">
+			<main className="grid grid-cols-[1fr_auto] max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-2xl h-full mx-auto">
 				<Link
 					href="/"
 					className="px-4 text-white hover:text-gray-200 w-fit flex items-center gap-1.5 h-full"

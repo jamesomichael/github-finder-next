@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
 				className={`min-h-screen grid grid-rows-[auto_1fr] antialiased dark:bg-neutral-900`}
 			>
 				<Navbar />
-				<main className="max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-2xl mx-auto m-8">
+				<main className="w-full max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-2xl mx-auto m-8">
 					{children}
 				</main>
 			</body>

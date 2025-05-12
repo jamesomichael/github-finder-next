@@ -50,7 +50,7 @@ const UserDetails = ({ user }) => {
 				src={avatar_url}
 				alt={login}
 				title={name ? name : login}
-				className="rounded-full aspect-square w-72 outline outline-2 outline-gray-400"
+				className="rounded-full aspect-square w-52 sm:w-72 outline outline-2 outline-gray-400"
 			/>
 			<div className="flex flex-col">
 				{name && (

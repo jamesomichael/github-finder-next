@@ -8,7 +8,7 @@ import { FaRegStar, FaCodeFork } from 'react-icons/fa6';
 
 const RepoCard = ({ repo }) => {
 	return (
-		<div className="grid grid-rows-3 h-52 rounded outline outline-2 outline-black dark:outline-gray-500 px-4">
+		<div className="grid grid-rows-3 h-52 rounded outline outline-2 outline-neutral-400 dark:outline-gray-500 px-4">
 			<div className="grid grid-cols-[1fr_auto] items-center">
 				<Link
 					href={repo.html_url}
@@ -18,7 +18,7 @@ const RepoCard = ({ repo }) => {
 				>
 					{repo.name}
 				</Link>
-				<span className="text-xs outline outline-2 outline-gray-500 dark:outline-gray-400 text-gray-500 dark:text-gray-400 px-2 py-1 rounded-full font-bold">
+				<span className="text-xs outline outline-1 outline-neutral-400 dark:outline-neutral-400 text-neutral-500 dark:text-neutral-400 px-2 py-1 rounded-full font-bold">
 					{repo.private ? 'Private' : 'Public'}
 				</span>
 			</div>
@@ -29,10 +29,10 @@ const RepoCard = ({ repo }) => {
 					</p>
 				)}
 			</div>
-			<div className="grid grid-cols-[auto_auto_1fr] items-center gap-4 text-sm">
-				<div className="flex items-center gap-1">
+			<div className="grid grid-cols-[auto_auto_1fr] items-center text-sm">
+				<div>
 					{repo.language && (
-						<>
+						<div className="flex items-center gap-1 mr-4">
 							<div
 								className="rounded-full aspect-square w-3.5"
 								style={{
@@ -43,7 +43,7 @@ const RepoCard = ({ repo }) => {
 							<span className="truncate text-sm dark:text-gray-200">
 								{repo.language}
 							</span>
-						</>
+						</div>
 					)}
 				</div>
 				<div className="flex justify-center items-center gap-4 dark:text-gray-200">

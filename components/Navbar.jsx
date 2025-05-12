@@ -34,9 +34,6 @@ const Navbar = () => {
 					<Link className="hover:text-gray-300" href="/">
 						Home
 					</Link>
-					<Link className="hover:text-gray-300" href="/about">
-						About
-					</Link>
 					<div className="flex items-center">
 						<button
 							onClick={toggleDarkMode}
